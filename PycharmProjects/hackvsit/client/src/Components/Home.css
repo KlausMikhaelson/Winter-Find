@@ -1,0 +1,16 @@
+body {
+    background-image: url("../assets/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header {
+    color: #48C353;
+    margin: 5%;
+    font-size: 2rem;
+}
+
+.slots:focus {
+    background-color: gray;
+}
+

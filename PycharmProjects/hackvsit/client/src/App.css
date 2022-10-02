@@ -1,0 +1,43 @@
+.slots {
+  padding: 30px;
+  background-color: blueviolet;
+  margin: 10px;
+  border-radius: 75% 25% 0% 100% / 56% 34% 66% 44% ;
+}
+
+.occupied {
+  border-radius: 75% 25% 0% 100% / 56% 34% 66% 44% ;
+  padding: 20px;
+}
+
+.reference {
+  text-align: center;
+  margin: 50px;
+}
+
+.Available {
+  border-radius: 75% 25% 0% 100% / 56% 34% 66% 44% ;
+  padding: 20px;
+  background-color: blueviolet;
+}
+
+
+.slots-collection {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 10% 10% 10% 10% 10%;
+}
+
+.header {
+  text-align: center;
+  margin: 3%;
+}
+
+.occupied {
+  background-color: gray;
+}
+
+.slots:focus {
+  background-color: gray;
+}
