@@ -1,0 +1,24 @@
+.progress {
+	background-color: #d8d8d8;
+	border-radius: 20px;
+	position: relative;
+	margin: 15px 0;
+	height: 30px;
+	width: 300px;
+}
+
+.progress-done {
+	background: #4e54c8;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #8f94fb, #4e54c8);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #8f94fb, #4e54c8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */   /* fallback for old browsers */
+	/* box-shadow: 0 3px 3px -5px #F2709C, 0 2px 5px #F2709C; */
+	border-radius: 8px;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 0;
+	opacity: 0;
+	transition: 1s ease 0.3s;
+}

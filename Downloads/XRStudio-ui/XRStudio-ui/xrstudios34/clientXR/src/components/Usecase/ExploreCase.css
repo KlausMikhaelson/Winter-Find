@@ -1,0 +1,43 @@
+.explore-case-main-container {
+  /* background-color: #000; */
+  /* height: 80vh;
+  width: 100%; */
+  color: #fff;
+  margin: 0rem 0;
+  padding-top: 1rem;
+  padding-bottom: 4rem;
+}
+
+.explore-case-heading {
+  margin-left: 6rem;
+  margin-bottom: 2rem;
+}
+.explore-case-heading h2 {
+  font-size: 55px;
+}
+
+.explore-case-container {
+  background: #222020;
+  border: #000;
+  color: #fff;
+  width: 70%;
+  margin: auto;
+  overflow: auto;
+}
+
+.explore-download {
+  background: linear-gradient(90deg, #f27025 0%, #fec429 102.39%);
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  /* float: right; */
+  margin-right: 15rem;
+  float: right;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  cursor: pointer;
+}
+
+.explore-download a {
+  text-decoration: none;
+  color: #000;
+}

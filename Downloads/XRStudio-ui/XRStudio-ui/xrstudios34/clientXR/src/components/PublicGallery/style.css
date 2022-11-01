@@ -1,0 +1,58 @@
+.modelDashboard-superContainer {
+  display: flex;
+  /* width: 100%; */
+}
+
+.product-heading {
+  margin-left: 2rem !important;
+  margin-top: 1rem;
+}
+
+.modelDashboard-mainContainer {
+  width: 100%;
+}
+
+.modelDashboard-modelArea-client-container {
+  margin: auto;
+}
+.modelDashboard-modelArea-client {
+  display: flex;
+  /* align-items: flex-start; */
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  /* margin-left: 1rem; */
+  /* width: 100%; */
+}
+
+.addProduct-button button {
+  /* width: 100px; */
+  /* height: 35px; */
+  background-color: #131212;
+  border: none;
+  color: white;
+  padding: 6px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  margin-right: 2rem;
+  margin-right: 16rem;
+}
+
+.addProduct-button button:hover {
+  background-color: white;
+  color: #131212;
+  border: 1px solid black;
+}
+
+/* .first-model {
+  margin-left: 1rem !important;
+} */
+
+@media only screen and (max-width: 1440px) {
+  
+}

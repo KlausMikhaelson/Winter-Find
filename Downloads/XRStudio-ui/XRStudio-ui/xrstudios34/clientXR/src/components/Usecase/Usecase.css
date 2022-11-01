@@ -1,0 +1,45 @@
+.admin-case-today {
+  padding: 0 2rem;
+  height: 75vh;
+  overflow-y: scroll;
+}
+
+.admin-case-container {
+  border: 1px solid;
+  padding: 1rem;
+}
+
+.admin-case-block {
+  border: 1px solid;
+  margin: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-case-title {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  width: 30%;
+}
+.admin-case-title > img {
+  width: 15%;
+  border-radius: 50%;
+}
+.admin-case-title p {
+  margin-left: 1rem;
+}
+
+.custom-case-admin {
+  height: 76vh;
+  overflow-y: scroll;
+  background: #fff !important;
+}
+.admin-case-time {
+  display: flex;
+}
+
+.admin-case-time p {
+  margin-right: 2rem;
+}

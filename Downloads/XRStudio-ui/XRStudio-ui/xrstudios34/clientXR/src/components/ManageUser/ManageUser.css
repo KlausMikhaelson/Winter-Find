@@ -1,0 +1,51 @@
+.manageUser-super-container {
+  display: flex;
+}
+
+.manageUser-container {
+  width: 100%;
+}
+
+.user-info-container {
+  margin-top: 3rem;
+  border: 1px solid;
+  width: 60%;
+  margin-left: 2rem;
+  border-radius: 8px;
+}
+
+.user-info-container div {
+  margin: 1.5rem;
+}
+.user-info-container h3 {
+  margin-top: 1rem;
+  margin-left: 1.5rem;
+}
+.back-btn {
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.user-name,
+.user-email,
+.user-address,
+.user-phone {
+  display: flex;
+  align-items: center;
+}
+
+.user-name label,
+.user-email label,
+.user-address label,
+.user-phone label {
+  font-weight: bold;
+}
+
+.user-edit button {
+  /* text-align: center; */
+  padding: 0.4rem 2rem;
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
+}

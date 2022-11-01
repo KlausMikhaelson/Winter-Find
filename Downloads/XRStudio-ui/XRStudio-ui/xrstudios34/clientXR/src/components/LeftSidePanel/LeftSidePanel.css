@@ -1,0 +1,85 @@
+.side-panel-container {
+  width: 350px;
+  box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.25) !important;
+  /* overflow: hidden; */
+  /* height: 100%; */
+  /* border-right: ; */
+}
+
+.side-panel-top {
+  width: 100%;
+  background-color: #000;
+  position: relative;
+  /* height: 20%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.side-panel-top img {
+  width: 60%;
+  margin-right: 2rem;
+}
+
+.side-panel-top hr {
+  position: absolute;
+  bottom: 40%;
+  color: #e1e1e1;
+  width: 70%;
+}
+
+.side-panel-top p {
+  position: absolute;
+  bottom: 15%;
+  color: #fff;
+}
+
+.side-panel-bottom {
+}
+
+.side-panel-options {
+  margin-top: 3rem;
+}
+
+.side-panel-options div {
+  display: flex;
+  margin-top: 2rem;
+  align-items: center;
+}
+
+.side-panel-option-1,
+.side-panel-option-2,
+.side-panel-option-3 {
+  margin-left: 0.7rem;
+}
+.side-panel-option-1 {
+  margin-left: 0.5rem;
+}
+
+.side-panel-option-1 p,
+.side-panel-option-2 p,
+.side-panel-option-3 p {
+  padding-left: 0.6rem !important;
+}
+
+.side-panel-option-3 {
+  margin-left: 1rem;
+}
+
+.side-panel-options div p {
+  margin-left: 3rem;
+}
+
+.side-panel-options div img {
+  /* left: 2rem; */
+  /* position: fixed;
+ left: 1.5rem; */
+  margin-left: 2rem;
+}
+
+.linked {
+  display: flex;
+  text-decoration: none;
+  color: #000;
+}

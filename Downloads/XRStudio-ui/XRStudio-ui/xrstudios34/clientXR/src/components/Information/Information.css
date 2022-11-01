@@ -1,0 +1,107 @@
+.information-mainContainer {
+  width: 60%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.information-mainContainer div {
+  /* margin-top: 1.5rem; */
+  width: 70%;
+  margin-bottom: 1rem;
+}
+
+.information-mainContainer label {
+  display: none;
+}
+
+.information-mainContainer input {
+  width: 80%;
+  background: linear-gradient(
+    116.82deg,
+    rgba(233, 233, 233, 0.15) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  filter: drop-shadow(0px 4px 90px rgba(0, 0, 0, 0.25));
+  backdrop-filter: blur(20px);
+  border: none;
+  border-radius: 8px;
+  height: 40px;
+  margin-top: 0.5rem;
+  outline: none;
+  width: 100%;
+  padding-left: 1rem;
+  color: #fff;
+  font-size: 16px;
+}
+
+.information-heading {
+  font-size: 1.5rem;
+  padding: 2rem;
+  text-align: center;
+  color: #fff;
+}
+
+/* .info-email-phone,
+.info-desig-organization {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+} */
+
+.infoName {
+  width: 65%;
+}
+
+.infoLeft {
+  width: 65%;
+}
+.infoRight {
+  width: 65%;
+}
+.infoSpeciality input,
+.infoInterest input {
+  /* width: 105%; */
+}
+
+.infoName,
+.infoSpeciality,
+.infoInterest,
+.infoEmail,
+.infoPhone,
+.infoDesig,
+.infoOrganization {
+  display: flex;
+  flex-direction: column;
+}
+
+.infoSpeciality {
+  /* width: 45%; */
+  /* margin-top: 1rem; */
+}
+
+.infoInterest {
+  width: 65%;
+  /* margin-top: 1rem; */
+}
+.info-submitBtn {
+  text-align: center;
+}
+
+.info-submitBtn button {
+  background: linear-gradient(90deg, #f27025 0%, #fec429 102.39%);
+  border-radius: 10px;
+  border: none;
+  border-radius: 5px;
+  /* color: white; */
+  width: 40%;
+  padding: 10px 75px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin-top: 5rem;
+  /* float: right; */
+}

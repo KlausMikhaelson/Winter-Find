@@ -1,0 +1,101 @@
+.uploadPageAfter-superContainer {
+    height: 100vh;
+    width: 100%;
+    background-color: #f2ecff;
+  }
+  
+  .uploadPage-closeButton {
+    float: right;
+    margin: 1rem;
+    background-color: rgb(246, 246, 246);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    color: #131212;
+    cursor: pointer;
+  }
+  
+  .uploadPageAfter-mainContainer {
+    height: 60vh;
+    width: 50%;
+    background-color: white;
+    position: fixed;
+    top: 25vh;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: center; */
+    border: 2px dotted grey;
+  }
+  
+  .uploadHeading {
+    position: fixed;
+    top: 15vh;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  
+  .uploadHeading h1 {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  
+  .uploadPageAfter-loadingStatus {
+    height: 250px;
+    width: 80%;
+    background-color: rgb(187, 187, 187);
+  
+  }
+
+  .uploadContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  
+  .topHeading {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  .topHeading span {
+    font-weight: 400;
+  }
+  
+
+  
+  .uploadContent-buttonSection {
+    margin: 1rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .uploadContent-buttonSection button {
+    background-color: white; /* Green */
+    border: 1px solid #131212;
+    color: #131212;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  .uploadContent-buttonSection button:hover {
+    background-color: rgb(238, 238, 238);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+  

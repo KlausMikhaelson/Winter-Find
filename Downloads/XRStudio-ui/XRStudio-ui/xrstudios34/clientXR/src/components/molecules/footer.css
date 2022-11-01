@@ -1,0 +1,51 @@
+.footer-container {
+  /* margin-top: 4rem; */
+  height: 400px;
+  background: #131312;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 8rem;
+  position: relative;
+}
+
+.footer-logo {
+  position: absolute;
+  height: 100px;
+  width: 30%;
+  object-fit: cover;
+  top: 0;
+  left: -4.5rem;
+  /* margin-right: 10rem; */
+  /* padding-right: 6rem; */
+  /* top: 0; */
+}
+
+.footer-left {
+  /* width: 30%; */
+  /* float: left; */
+  margin-left: 2rem;
+}
+
+.footer-left h4 {
+  font-size: 40px;
+  width: 60%;
+  font-weight: 300 !important;
+}
+
+.footer-left p {
+  margin-top: 1rem;
+  width: 50%;
+  font-weight: 300 !important;
+}
+
+.footer-right {
+  margin-right: 2rem;
+}
+
+.footer-right p {
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  /* font-weight: 900 !important; */
+}

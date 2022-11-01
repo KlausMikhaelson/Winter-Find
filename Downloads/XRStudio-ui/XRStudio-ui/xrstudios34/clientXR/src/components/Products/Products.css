@@ -1,0 +1,139 @@
+.products-super-container {
+  display: flex;
+  overflow: hidden !important;
+  margin-bottom: 5%;
+}
+
+.products-container {
+  /* height: 100vh; */
+  /* overflow: hidden !important; */
+  width: 100%;
+}
+
+.product-detail-container {
+  margin-left: 3.5rem;
+  overflow-x: hidden;
+}
+
+.product-descriptions {
+  position: relative;
+}
+
+.product-title {
+  margin-top: 2rem;
+}
+
+.product-title {
+  font-weight: bold;
+}
+.product-title input {
+}
+
+.product-link {
+  margin: 0;
+}
+
+.product-title input,
+#textarea {
+  padding: 0.7rem;
+  border: none;
+  width: 75%;
+  background-color: #f0f0f0;
+  margin: 1rem 0;
+  border-radius: 5px;
+  resize: none;
+  outline: none;
+}
+
+.product-image-video {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  /* overflow-y: scroll; */
+  height: 35vh;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.product-image-video p {
+  margin: 1rem 0;
+}
+
+.product-image-video img {
+  margin: 1rem 0;
+  /* height: 50%; */
+  width: 50%;
+}
+.product-descriptions {
+  font-weight: bold;
+}
+
+/* .product-image {
+  position: relative;
+} */
+.product-image button,
+.product-image label {
+  position: fixed;
+  bottom: 32%;
+  right: 22%;
+  padding: 0.5rem;
+  width: 150px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.product-video {
+  /* position: relative; */
+  border: 1px solid #000;
+  width: 60%;
+  margin: auto;
+  height: 60%;
+  background: #fff;
+  text-align: center;
+  border-style: dotted;
+  border-width: 3px;
+}
+
+.product-video button {
+  position: fixed;
+  bottom: 2%;
+  right: 22%;
+  padding: 0.5rem;
+  width: 100px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.cover-image-btn {
+  position: fixed;
+  right: 22%;
+  bottom: 18% !important;
+  background-color: #000;
+  color: #fff;
+  padding: 0.5rem;
+  width: 100px;
+  border-radius: 5px;
+  font-size: 14px !important;
+  text-align: center;
+}
+
+.product-price {
+  /* position: absolute; */
+  right: 60px;
+  bottom: 30%;
+}
+
+.product-price input {
+  padding: 0.7rem;
+  border: none;
+  width: 75%;
+  background-color: #f0f0f0;
+  margin: 1rem 0;
+  border-radius: 5px;
+  resize: none;
+  outline: none;
+}

@@ -1,0 +1,25 @@
+.client-nav-container {
+  background-color: #181912;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 120px;
+}
+
+.client-nav-left img {
+  width: 50%;
+  padding-top: 2.5rem;
+  padding-left: 2rem;
+}
+
+.client-nav-right {
+  color: #fff;
+  display: flex;
+}
+.client-nav-right div {
+  margin-right: 4rem;
+}
+
+.client-nav-right div:hover {
+  cursor: pointer;
+}

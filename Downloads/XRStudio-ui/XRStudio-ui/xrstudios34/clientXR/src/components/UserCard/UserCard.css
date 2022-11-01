@@ -1,0 +1,72 @@
+
+.userCard-userInfo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    background-color: white;
+    height: 110px;
+    margin: auto;
+    margin-top: 2rem;
+    color: #131212;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.userCard-leftSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.userInfoName{
+    margin:1rem;
+}
+.userInfoName h1{
+    /* color: #131212; */
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.userCard-rightSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.userCard-rightSection h1{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.activeState ,.removeState ,.viewState ,.userPositionState{
+    margin-right: 2rem;
+}
+.viewState{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.removeState{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.userLogo img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 4px 10px;
+    /* margin-left: 2rem; */
+}
+
+.userLogo{
+    margin-left: 2rem;
+}
+
+.activeState{
+    color: #00A725;
+}

@@ -1,0 +1,101 @@
+.transaction-super-container {
+  display: flex;
+}
+
+.transaction-container {
+  width: 100%;
+}
+
+.searchBar-area {
+  height: 2.5rem;
+  border: 1px solid;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.searchBar-area input {
+  width: 100%;
+}
+
+.transaction-table {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  width: 100%;
+  /* margin-top: 4rem; */
+  border-spacing: 2rem 3rem;
+  overflow-y: scroll;
+}
+
+.transaction-table tr th {
+  /* margin-right: 2rem; */
+  color: #9e9e9e;
+}
+
+.transaction-table tr {
+  /* border-spacing: 1rem 1rem; */
+  /* padding-top: 1rem !important; */
+}
+
+.transaction-table td {
+  text-align: center;
+  font-weight: 400 !important;
+  /* margin-top: 2rem; */
+}
+
+.transaction-details-container {
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
+.transaction-details-container h2 {
+  font-weight: 400;
+}
+
+.transaction-details {
+  /* height: 60vh; */
+  background-color: #f8f8f8;
+  width: 55%;
+}
+
+.transaction-details-row-1 {
+  padding-top: 2rem !important;
+}
+
+.transaction-details div {
+  margin-left: 2rem;
+  margin-top: 1.5rem;
+}
+
+.transaction-details div h3 {
+  color: #9e9e9e;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.transaction-details-row-7 {
+  /* padding-bottom: 4rem; */
+  /* display: flex; */
+  position: relative;
+}
+
+.transaction-details-row-7 p {
+  /* margin-left: 15rem; */
+  position: absolute;
+  top: 0;
+  left: 45%;
+  font-size: 20px;
+}
+
+.transaction-details-row-8 {
+  text-align: center;
+}
+.transaction-details-row-8 button {
+  padding: 0.5rem 6rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  margin-bottom: 2rem;
+}

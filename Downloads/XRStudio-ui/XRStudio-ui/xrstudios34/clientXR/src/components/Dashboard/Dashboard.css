@@ -1,0 +1,135 @@
+.dashboard-superContainer {
+  display: flex;
+  /* height: 100vh; */
+  margin-bottom: 5%;
+}
+
+.dashboard-mainContainer {
+  width: 100%;
+  /* height: 50vh; */
+}
+.graph-container {
+  display: flex;
+  justify-content: space-around;
+}
+.bar-graph,
+.line-chart {
+  /* height: 00px; */
+  /* width: 1000px; */
+  width: 70%;
+  background-color: #ffffff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  color: #131212 !important;
+  margin-top: 1rem;
+  /* padding: 1rem !important; */
+}
+
+.bar-graph {
+  /* margin-left: 2.5rem; */
+}
+.line-chart {
+  /* margin-right: 2.5rem; */
+}
+
+.dashboard-cases-container {
+  display: flex;
+}
+
+.dashboard-cases {
+  display: flex;
+  margin-right: 2rem;
+}
+
+.dashboard-cases div {
+  width: 180px;
+  height: 180px;
+  /* border: 1px solid; */
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 8px;
+}
+.dashboard-insights {
+  display: flex;
+}
+
+.dashboard-insights div {
+  width: 200px;
+  height: 200px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.dashboard-total-cases {
+  background: #000;
+  color: #fff;
+}
+
+.dashboard-total-cases img {
+  margin: 1rem;
+}
+
+.dashboard-total-cases-solved img {
+  border-radius: 50%;
+
+  margin: 1rem;
+}
+.dashboard-cases div {
+  margin-left: 2rem;
+  margin-top: 4rem;
+}
+
+.dashboard-cases div p {
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+}
+
+.case-value {
+  margin-top: 1rem !important;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.dashboard-insights div img {
+  border-radius: 50%;
+
+  margin: 1rem;
+}
+
+.dashboard-insights div p {
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+}
+
+.dashboard-insights div {
+  margin-left: 2rem;
+  margin-top: 4rem;
+  border-radius: 8px;
+  height: 180px;
+  width: 180px;
+}
+
+.dashboard-insights {
+  position: relative;
+  margin-left: 3rem;
+}
+
+.insights-heading {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-weight: 600;
+}
+
+.dashboard-total-users {
+  background: #000;
+  color: #fff;
+}
+
+.dashboard-cases {
+  position: relative;
+}
+
+.cases-heading {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-weight: 600;
+}

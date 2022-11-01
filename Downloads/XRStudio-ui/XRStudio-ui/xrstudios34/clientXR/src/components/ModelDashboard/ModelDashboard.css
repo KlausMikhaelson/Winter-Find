@@ -1,0 +1,49 @@
+.modelDashboard-superContainer {
+  display: flex;
+  /* width: 100%; */
+}
+
+.modelDashboard-mainContainer {
+  width: 100%;
+}
+
+.modelDashboard-modelArea {
+  /* overflow-y: scroll; */
+  display: flex;
+  /* align-items: flex-start; */
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-right: 3rem;
+}
+
+.addProduct-button button {
+  /* width: 100px; */
+  /* height: 35px; */
+  background-color: #131212;
+  border: none;
+  color: white;
+  padding: 6px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  margin-right: 2rem;
+  margin-right: 16rem;
+}
+
+.addProduct-button button:hover {
+  background-color: white;
+  color: #131212;
+  border: 1px solid black;
+}
+
+@media only screen and (max-width: 1440px) {
+  .modelCard-mainContainer {
+    /* margin-left: 2rem; */
+    margin: 1.2rem;
+  }
+}

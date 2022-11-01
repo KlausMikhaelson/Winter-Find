@@ -1,0 +1,143 @@
+.manageAdminDashboard-superContainer{
+    display: flex;
+    width: 100%;
+    }
+    
+.manageAdminDashboard-mainContainer{
+        width: 100%;
+}
+    
+
+.navbarMangeAdmin-subContainer{
+    display: flex;
+    width: 100%;
+    height: 5rem;
+    justify-content: space-between;
+    align-items: center;
+    color: #131212;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+
+
+.navbarMangeAdmin-leftSideContent{
+    margin-left: 3.5rem;
+}
+
+.navbarMangeAdmin-rightSideContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 3.5rem;
+}
+
+.navbarMangeAdmin-mainHeading{
+    font-size: 12px;
+
+}
+
+.navbarMangeAdmin-mainHeading h1{
+    font-weight: 400;
+}
+
+.navbarMangeAdmin-bell-message-icons{
+    display: flex;
+    margin-right: 2.5rem;
+    border-right: 1px solid #E1E1E1;
+    padding-right: 2.5rem;
+    /* margin-top: 20px; */
+}
+
+.navbarMangeAdmin-messageIcon{
+    margin-right: 2rem;
+}
+
+
+.navbarMangeAdmin-userProfile-nameInfo{
+    margin-right: 1rem;
+}
+
+.navbarMangeAdmin-userProfile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.navbarMangeAdmin-userProfile-name{
+    font-size: 1rem;
+    font-weight: 600;
+}
+.navbarMangeAdmin-userProfile-position{
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #949494;
+   
+}
+
+.navbarMangeAdmin-userProfile-logoSection img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 4px 10px;
+    
+}
+
+
+
+.addAdmin-searchBar-area{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 1rem;
+    /* margin: 1rem; */
+    background-color: white;
+    border-bottom:1px solid #E1E1E1;
+    
+    
+}
+.searchBar-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2.5rem;
+    border: 1px solid #E1E1E1;
+    border-radius: 5px;
+    padding: 1px 10px;
+    
+}
+
+.searchBar-area div input{
+    outline: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: c;
+
+    
+}
+
+.addAdmin-button button {
+    /* width: 100px; */
+    /* height: 35px; */
+    background-color: #131212;
+    border: none;
+    color: white;
+    padding: 6px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    margin-right: 2rem;
+  }
+
+  .addAdmin-button button:hover{
+background-color: white;
+color: #131212;
+border: 1px solid black;
+  }
