@@ -124,8 +124,8 @@ const PlayerModel: React.FC = () => {
     
     return(
       <>
-      <object3D ref={ref} position={[10, 3.6, 2]}>
-        <OrbitControls ref={controlsref}/>
+      <object3D ref={ref} >
+        <OrbitControls ref={controlsref} enableZoom={false}/>
         <primitive object={modelPlayer.scene} />
       </object3D>
       </>
