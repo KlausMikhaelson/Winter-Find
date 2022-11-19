@@ -6,6 +6,33 @@ import React, { forwardRef, useEffect, useRef } from "react";
 import { useInput } from "../../hooks/Keyboard";
 
 
+const directions = ({forward, backward, left, right}) => {
+    var directions = 0;
+
+    if(forward) {
+        if(left) {
+            directions = Math.PI / 4;
+        } else if(right) {
+            directions = -Math.PI / 4;
+        }
+    } else if (backward) {
+        if(left) {
+            directions = Math.PI / 4 + Math.PI / 2;
+        } else if(right) {
+            directions = -Math.PI / 4 - Math.PI / 2; 
+        } else {
+            directions = Math.PI;
+        }
+    } else if(left) {
+        directions = Math.PI / 2;
+    } else if (right) {
+        directions = -Math.PI / 2;
+    }
+
+    return directions;
+}
+
+
 const PlayerModel: React.FC = () => {
     const {forward, backward, left, right, jump}  = useInput()
     const modelPlayer = useLoader(GLTFLoader, "./models/playerss.glb")
@@ -39,12 +66,16 @@ const PlayerModel: React.FC = () => {
     //   actions?.walkingmodel?.play()
     }, [forward, backward, left, right, jump])
     const [ref] = useBox(() => ({
-        // mass: 0
     }))
 
     useFrame((state, delta) => {
         if(currentAction.current == "walkingmodel") {
-            modelPlayer.scene.position.x += 0.1
+            let angleYcameraDirection = Math.atan2(
+                camera.position.x - modelPlayer.scene.position.x,
+                camera.position.z - modelPlayer.scene.position.z
+            );
+
+
         }
     })
     
