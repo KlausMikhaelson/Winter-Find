@@ -31,5 +31,5 @@ Increased knowledge of Markdown language
 How to use GitHub repo, Devpost, and frameworks like next.js
 
 # What's next for Winter Find
-Mass publicity to grain users
-Improvement of the game
+- Mass publicity to grain users
+- Improvement of the game
