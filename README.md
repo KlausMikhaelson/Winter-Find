@@ -1,4 +1,4 @@
-# HackComing 2 - WinterFind
+# Hackcoming 2 - WinterFind
 The Winter Find Project's official Github repository for HackComing 2
 # Team Members
 - Kartik
