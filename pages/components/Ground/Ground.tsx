@@ -3,7 +3,7 @@ import { useLoader } from "@react-three/fiber"
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
 
 const GameMap = () => {
-    const model = useLoader(GLTFLoader, "./models/map.glb")
+    const model = useLoader(GLTFLoader, "../models/map.glb")
     return (
         <>
 
