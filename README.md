@@ -23,8 +23,8 @@ We built the app using the following languages, and framework
 learning new skills  to implement the project
 
 # Accomplishments that we're proud of
--We are proud to be able to implement this game in a short time and the fact that our studies and work weren't a hindrance in implementing this game.
--The game helps in Relieving stress and treating depression. It helps by keeping the brain busy with fun and engaging tasks.
+- We are proud to be able to implement this game in a short time and the fact that our studies and work weren't a hindrance in implementing this game.
+- The game helps in Relieving stress and treating depression. It helps by keeping the brain busy with fun and engaging tasks.
 
 # What We Learned
 Increased knowledge of Markdown language
