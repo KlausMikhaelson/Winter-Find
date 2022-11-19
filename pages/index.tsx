@@ -5,11 +5,12 @@ import { useEffect, useRef } from "react";
 import { OrbitControls, Stats } from '@react-three/drei';
 import Lights from './components/Lightning/Lights';
 import { useLoader } from "@react-three/fiber"
+// @ts-ignore
+
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
-import Fpv from './components/Camera/Fpv';
+
 import { NextPage } from 'next'
 import Ground from './components/Ground/Ground'
-import {usePlane} from "@react-three/cannon"
 
 
 // const GameMap = () => {
