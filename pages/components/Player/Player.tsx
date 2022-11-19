@@ -4,10 +4,18 @@ import { useFrame, useLoader, useThree } from "@react-three/fiber"
 import { OrbitControls, useAnimations, useHelper } from "@react-three/drei";
 import React, { forwardRef, useEffect, useRef } from "react";
 import { useInput } from "../../hooks/Keyboard";
+import * as THREE from "three"
 
+
+const walkdirection = new THREE.Vector3()
+let rotateAngle = new THREE.Vector3(0,1,0);
+let rotateQuarternion = new THREE.Quaternion();
+let cameraTarget = new THREE.Vector3()
 
 const directions = ({forward, backward, left, right}) => {
     var directions = 0;
+
+    // diagonals
 
     if(forward) {
         if(left) {
@@ -23,8 +31,10 @@ const directions = ({forward, backward, left, right}) => {
         } else {
             directions = Math.PI;
         }
+        // left
     } else if(left) {
         directions = Math.PI / 2;
+        // right
     } else if (right) {
         directions = -Math.PI / 2;
     }
@@ -42,6 +52,16 @@ const PlayerModel: React.FC = () => {
     const currentAction = useRef("")
     const controlsref = useRef<typeof OrbitControls>();
     const camera = useThree((state) => state.camera);
+
+    const updateCamera = (moveX: number, moveZ: number) => {
+        camera.position.x += moveX;
+        camera.position.z += moveZ;
+
+        cameraTarget.x = modelPlayer.scene.position.x;
+        cameraTarget.y = modelPlayer.scene.position.y + 2;
+        cameraTarget.z = modelPlayer.scene.position.z;
+        if(controlsref.current) controlsref.current.target = cameraTarget;
+    }
   
     useEffect(() => {
         let action = ""
@@ -74,8 +94,30 @@ const PlayerModel: React.FC = () => {
                 camera.position.x - modelPlayer.scene.position.x,
                 camera.position.z - modelPlayer.scene.position.z
             );
+            let newDirections = directions({
+                forward,
+                backward,
+                left,
+                right
+            });
+// rotating
+            rotateQuarternion.setFromAxisAngle(
+                rotateAngle,
+                angleYcameraDirection + newDirections
+            );
+            modelPlayer.scene.quaternion.rotateTowards(rotateQuarternion, 0.2)
 
+            camera.getWorldDirection(walkdirection);
+            walkdirection.y = 0;
+            walkdirection.normalize();
+            walkdirection.applyAxisAngle(rotateAngle, newDirections);
 
+            const velocity = currentAction.current == "walkingmodel" ? 5 : 2;
+
+            const moveX = walkdirection.x * velocity * delta;
+            const moveZ = walkdirection.z * velocity * delta;
+            modelPlayer.scene.position.x += moveX;
+            modelPlayer.scene.position.z += moveZ
         }
     })
     
