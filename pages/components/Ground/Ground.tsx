@@ -1,9 +1,28 @@
+import { useLoader } from "@react-three/fiber"
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
+import {usePlane} from "@react-three/cannon"
+import { useBoxProjectedEnv } from "@react-three/drei"
+
+const GameMap = () => {
+    const model = useLoader(GLTFLoader, "./models/map.glb")
+    return (
+        <>
+
+            <object3D position={[0, 0, 0]} scale={[20, 20, 20]}>
+                <primitive object={model.scene} />
+            </object3D>
+        </>
+
+    )
+}
+
 
 const Ground: React.FC = () => {
     return (
-        <mesh rotation-x={Math.PI * -0.5} receiveShadow>
-            <planeBufferGeometry args={[1000, 1000]} />
-            <meshStandardMaterial color={"#87ceeb"} />
+        <mesh>
+            <GameMap />
+            {/* <planeBufferGeometry args={[1000, 1000]} />
+            <meshStandardMaterial color={"#87ceeb"} /> */}
         </mesh>
     )
 }
