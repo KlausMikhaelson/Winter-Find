@@ -118,6 +118,7 @@ const PlayerModel: React.FC = () => {
             const moveZ = walkdirection.z * velocity * delta;
             modelPlayer.scene.position.x += moveX;
             modelPlayer.scene.position.z += moveZ
+            updateCamera(moveX, moveZ)
         }
     })
     

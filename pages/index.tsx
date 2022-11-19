@@ -56,7 +56,7 @@ const Home: NextPage = () => {
 
   return (
     <div className='container'>
-      <Canvas camera={{ position: [10, 5, 0] }}>
+      <Canvas>
       <Physics>
         <Sky />
         <OrbitControls />
