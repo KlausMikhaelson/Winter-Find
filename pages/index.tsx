@@ -14,7 +14,8 @@ import { NextPage } from 'next'
 import Ground from './components/Ground/Ground'
 import PlayerModel from './components/Player/Player';
 import GameMap from "./components/Ground/Ground"
-import { Sky } from '@react-three/drei';
+import { Sky, Cloud, Stars } from '@react-three/drei';
+import { fog } from '@react-three/fiber';
 
 
 // const GameMap = () => {
@@ -57,9 +58,11 @@ const Home: NextPage = () => {
   return (
     <div className='container'>
       <Canvas>
-      <Physics>
         <Sky />
-        <OrbitControls />
+        <fog attach="fog" color="white" near={5} far={10} />
+        <Stars />
+      <Physics>
+        <Stats />
         <Lights />
         <gridHelper args={[10, 10]} />
         {/* <Fpv /> */}
