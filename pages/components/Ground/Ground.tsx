@@ -1,4 +1,5 @@
 import { useLoader } from "@react-three/fiber"
+// @ts-ignore
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
 import {usePlane} from "@react-three/cannon"
 import { useBoxProjectedEnv } from "@react-three/drei"
