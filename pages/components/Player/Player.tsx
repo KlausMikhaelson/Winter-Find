@@ -1,7 +1,7 @@
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
 import { Physics, useBox, usePlane } from '@react-three/cannon'
-import { useLoader } from "@react-three/fiber"
-import { useAnimations, useHelper } from "@react-three/drei";
+import { useFrame, useLoader, useThree } from "@react-three/fiber"
+import { OrbitControls, useAnimations, useHelper } from "@react-three/drei";
 import React, { forwardRef, useEffect, useRef } from "react";
 import { useInput } from "../../hooks/Keyboard";
 
@@ -13,6 +13,8 @@ const PlayerModel: React.FC = () => {
     console.log(modelPlayer)
 
     const currentAction = useRef("")
+    const controlsref = useRef<typeof OrbitControls>();
+    const camera = useThree((state) => state.camera);
   
     useEffect(() => {
         let action = ""
@@ -39,10 +41,17 @@ const PlayerModel: React.FC = () => {
     const [ref] = useBox(() => ({
         // mass: 0
     }))
+
+    useFrame((state, delta) => {
+        if(currentAction.current == "walkingmodel") {
+            modelPlayer.scene.position.x += 0.1
+        }
+    })
     
     return(
       <>
       <object3D ref={ref} position={[10, 3.6, 2]}>
+        <OrbitControls ref={controlsref}/>
         <primitive object={modelPlayer.scene} />
       </object3D>
       </>
