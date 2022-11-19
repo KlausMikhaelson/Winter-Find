@@ -19,7 +19,7 @@ We built the app using the following languages, and framework
 - Three.js
 - Blender
 
-# Cchallenges We ran into
+# Challenges We ran into
 learning new skills  to implement the project
 
 # Accomplishments that we're proud of
