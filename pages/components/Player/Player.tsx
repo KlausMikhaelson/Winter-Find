@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router'
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
 import { Physics, useBox, usePlane } from '@react-three/cannon'
 import { useFrame, useLoader, useThree } from "@react-three/fiber"
@@ -43,11 +44,36 @@ const directions = ({forward, backward, left, right}) => {
 }
 
 
-const PlayerModel: React.FC = () => {
+
+function getRandomArbitrary(low, high) {
+    return Math.random() * (high - low) + low;
+  }
+
+  var itemPos = [getRandomArbitrary(-75, 75), 1, getRandomArbitrary(-75, 75)];
+export const GiftModel: React.FC = () => {
+  
+      const modelGift = useLoader(GLTFLoader, "./models/Gift.glb")
+  
+      const [ref] = useBox(() => ({
+        type: 'static',
+        mass: 1,
+        position: itemPos
+      }))
+  
+      return(
+          <>
+            <object3D ref={ref}>
+              <primitive object={modelGift.scene} scale={[0.04, 0.04, 0.04]} />
+              </object3D>
+          </>
+      )
+  }
+
+
+export const PlayerModel: React.FC = () => {
     const {forward, backward, left, right, jump}  = useInput()
     const modelPlayer = useLoader(GLTFLoader, "./models/playerss.glb")
     const {actions} = useAnimations(modelPlayer.animations, modelPlayer.scene)
-    console.log(modelPlayer)
 
     const currentAction = useRef("")
     const controlsref = useRef<typeof OrbitControls>();
@@ -82,8 +108,6 @@ const PlayerModel: React.FC = () => {
             currentAction.current = action;
         }
 
-    //   actions?.Jumpingmodels?.play()
-    //   actions?.walkingmodel?.play()
     }, [forward, backward, left, right, jump])
     const [ref] = useBox(() => ({
     }))
@@ -121,7 +145,20 @@ const PlayerModel: React.FC = () => {
             updateCamera(moveX, moveZ)
         }
     })
-    
+
+    const router = useRouter()
+    var playerPos = [Math.round(modelPlayer.scene.position.x), Math.round(modelPlayer.scene.position.y), Math.round(modelPlayer.scene.position.z)];
+    var avItemPos = [Math.round(itemPos[0]), Math.round(itemPos[1]), Math.round(itemPos[2])]
+
+    console.log(playerPos);
+    console.log(avItemPos);
+    if((playerPos[0] == avItemPos[0] && playerPos[1] == avItemPos[1]) || 
+        (playerPos[1] == avItemPos[1] && playerPos[2] == avItemPos[2]) || 
+        (playerPos[0] == avItemPos[0] && playerPos[2] == avItemPos[2]) ){
+        
+            router.push('/gameover');
+    }
+
     return(
       <>
       <object3D ref={ref} >
@@ -132,4 +169,3 @@ const PlayerModel: React.FC = () => {
     )
   }
 
-  export default PlayerModel;
