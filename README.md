@@ -1,10 +1,10 @@
 # Hackcoming 2 - WinterFind
 The Winter Find Project's official Github repository for HackComing 2
 # Team Members
-- Kartik
-- Satyam 
+- Kartik Patel
+- Satyam Singh
 - Happiness 
-- Singh
+- Shivam Singh
 # Inspiration
 we got the inspiration from brainstorming and constantly thinking about games related to winter. The idea was gotten from our childhood gaming experience from playing GTA, and we wanted to create something similar, fun and also winter-related 
 
