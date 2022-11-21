@@ -6,11 +6,14 @@ import PlayerModel from "../Player/Player"
 
 const GameMap = () => {
     // const model = useLoader(GLTFLoader, "./models/map.glb")
-    // const [ref] = useBox(() => ({
-    // }))
+    const [ref] = useBox(() => ({
+        rotation: [Math.PI * -0.5, 0, 0],
+        mass: 10,
+        type: "Static"
+    }))
     return (
         <>
-            <mesh rotation-x={Math.PI * -0.5} receiveShadow>
+            <mesh ref={ref} rotation-x={Math.PI * -0.5} receiveShadow>
                 <planeBufferGeometry args={[150, 150]} />
                 <meshStandardMaterial color={"#ffffff"} />
             </mesh>
