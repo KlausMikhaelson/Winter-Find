@@ -82,6 +82,7 @@ export const PlayerModel: React.FC = () => {
     const updateCamera = (moveX: number, moveZ: number) => {
         camera.position.x += moveX;
         camera.position.z += moveZ;
+        camera.position.y = 3;
 
         cameraTarget.x = modelPlayer.scene.position.x;
         cameraTarget.y = modelPlayer.scene.position.y + 2;
@@ -162,7 +163,7 @@ export const PlayerModel: React.FC = () => {
     return(
       <>
       <object3D ref={ref} >
-        <OrbitControls ref={controlsref} enableZoom={false}/>
+        <OrbitControls ref={controlsref} maxPolarAngle={Math.PI/2.5} enableZoom={false}/>
         <primitive object={modelPlayer.scene} />
       </object3D>
       </>

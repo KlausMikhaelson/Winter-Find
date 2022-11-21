@@ -12,7 +12,7 @@ import { Physics, useBox, usePlane } from '@react-three/cannon'
 
 import { NextPage } from 'next'
 import Ground from './components/Ground/Ground'
-import {PlayerModel, GiftModel} from './components/Player/Player';
+import { PlayerModel, GiftModel } from './components/Player/Player';
 // import GameMap from "./components/Ground/Ground"
 // import GiftModel from "./components/GiftModel/GiftModel"
 import Hurdle from "./components/Hurdle/Hurdle"
@@ -25,7 +25,7 @@ import { fog } from '@react-three/fiber';
 
 //   return (
 //     <>
-    
+
 //       <object3D position={[0, 0, 0]} scale={[20, 20, 20]}>
 //         <primitive object={model.scene} />
 //       </object3D>
@@ -44,7 +44,7 @@ import { fog } from '@react-three/fiber';
 //   })
 //   const [ref] = useBox(() => ({
 //   }))
-  
+
 //   return(
 //     <>
 //     <object3D ref={ref} position={[10, 3.6, 2]}>
@@ -59,20 +59,21 @@ const Home: NextPage = () => {
 
   return (
     <div className='container'>
+      {/* camera={{position:[0,2,0]}} */}
       <Canvas>
-        <Sky  sunPosition={[0, -1, 0]} inclination={0} azimuth={0.5} />
+        <Sky sunPosition={[0, -1, 0]} inclination={0} azimuth={0.5} />
         <fog attach="fog" color="#f2f2f" near={7} far={10} />
         <Stars radius={1} depth={500} count={5000} factor={40} saturation={0} fade speed={1} />
-      <Physics>
-        <Stats />
-        <Lights />
-        <gridHelper args={[1, 1]} />
-        {/* <Fpv /> */}
-        <Ground />
-        <PlayerModel />
-        <GiftModel />
-        <Hurdle />
-      </Physics>
+        <Physics>
+          <Stats />
+          <Lights />
+          <gridHelper args={[1, 1]} />
+          {/* <Fpv /> */}
+          <Ground />
+          <PlayerModel />
+          <GiftModel />
+          <Hurdle />
+        </Physics>
       </Canvas>
     </div>
   )

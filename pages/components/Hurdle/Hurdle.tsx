@@ -15,7 +15,7 @@ const Hurdle: React.FC = () => {
     const hurdle03 = useLoader(GLTFLoader, "./models/hurdle03.glb")
 
     const [ref] = useBox(() => ({
-      type: 'static',
+      type: 'Static',
       mass: 1,
       
     }))
