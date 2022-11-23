@@ -1,10 +1,12 @@
 import { useRouter } from 'next/router'
+// @ts-ignore
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
 import { Physics, useBox, usePlane } from '@react-three/cannon'
 import { useFrame, useLoader, useThree } from "@react-three/fiber"
 import { OrbitControls, useAnimations, useHelper } from "@react-three/drei";
 import React, { forwardRef, useEffect, useRef } from "react";
 import { useInput } from "../../hooks/Keyboard";
+// @ts-ignore
 import * as THREE from "three"
 
 
@@ -13,6 +15,7 @@ let rotateAngle = new THREE.Vector3(0,1,0);
 let rotateQuarternion = new THREE.Quaternion();
 let cameraTarget = new THREE.Vector3()
 
+// @ts-ignore
 const directions = ({forward, backward, left, right}) => {
     var directions = 0;
 
@@ -44,7 +47,7 @@ const directions = ({forward, backward, left, right}) => {
 }
 
 
-
+// @ts-ignore
 function getRandomArbitrary(low, high) {
     return Math.random() * (high - low) + low;
   }
@@ -52,11 +55,12 @@ function getRandomArbitrary(low, high) {
   var itemPos = [getRandomArbitrary(-75, 75), 1, getRandomArbitrary(-75, 75)];
 export const GiftModel: React.FC = () => {
   
-      const modelGift = useLoader(GLTFLoader, "./models/Gift.glb")
-  
+      const modelGift = useLoader(GLTFLoader, "/models/Gift.glb")
       const [ref] = useBox(() => ({
+          // @ts-ignore
         type: 'static',
         mass: 1,
+        // @ts-ignore
         position: itemPos
       }))
   
@@ -87,6 +91,7 @@ export const PlayerModel: React.FC = () => {
         cameraTarget.x = modelPlayer.scene.position.x;
         cameraTarget.y = modelPlayer.scene.position.y + 2;
         cameraTarget.z = modelPlayer.scene.position.z;
+        // @ts-ignore
         if(controlsref.current) controlsref.current.target = cameraTarget;
     }
   
@@ -163,6 +168,7 @@ export const PlayerModel: React.FC = () => {
     return(
       <>
       <object3D ref={ref} >
+      {/* @ts-ignore */}
         <OrbitControls ref={controlsref} maxPolarAngle={Math.PI/2.5} enableZoom={false}/>
         <primitive object={modelPlayer.scene} />
       </object3D>

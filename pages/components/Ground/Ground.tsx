@@ -2,7 +2,6 @@ import { useLoader } from "@react-three/fiber"
 // @ts-ignore
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
 import { Physics, useBox, usePlane } from '@react-three/cannon'
-import PlayerModel from "../Player/Player"
 
 const GameMap = () => {
     // const model = useLoader(GLTFLoader, "./models/map.glb")

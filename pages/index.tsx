@@ -15,7 +15,7 @@ import Ground from './components/Ground/Ground'
 import { PlayerModel, GiftModel } from './components/Player/Player';
 import Hurdle from "./components/Hurdle/Hurdle"
 import { Sky, Cloud, Stars } from '@react-three/drei';
-import { fog } from '@react-three/fiber';
+// @ts-ignore
 
 
 

@@ -1,5 +1,4 @@
 import 'bootstrap/dist/css/bootstrap.css'
-import styles from '../styles/globals.css'
 
 const gameover = () => {
 

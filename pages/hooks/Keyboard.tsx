@@ -16,14 +16,15 @@ export const useInput = () => {
         KeyD: "right",
         Space: "jump"
     }
-
+// @ts-ignore
     const findKey = (key: string) => keys[key];
 
     useEffect(() => {
-
+// @ts-ignore
         const handleKeydown = (e) => {
             setInput((m) => ({ ...m, [findKey(e.code)]: true}))
         }
+        // @ts-ignore
         const handleKeyup = (e) => {
             setInput((m) => ({...m, [findKey(e.code)]: false}))
         }

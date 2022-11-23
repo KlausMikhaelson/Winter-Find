@@ -1,9 +1,12 @@
+// @ts-ignore
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
 import { Physics, useBox, usePlane } from '@react-three/cannon'
 import { useFrame, useLoader, useThree } from "@react-three/fiber"
 import React, { forwardRef, useEffect, useRef } from "react";
+// @ts-ignore
 import * as THREE from "three"
 
+// @ts-ignore
 function getRandomArbitrary(low, high) {
   return Math.random() * (high - low) + low;
 }
