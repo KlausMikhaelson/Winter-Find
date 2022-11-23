@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react"
-
-export const useInput = () => {
+import React, { useEffect, useState } from "react"
+// @ts-ignore
+export const useInput: React.FC = () => {
     const [input, setInput] = useState({
         forward: false,
         backward: false,
