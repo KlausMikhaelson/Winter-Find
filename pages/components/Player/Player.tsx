@@ -16,10 +16,11 @@ let rotateQuarternion = new THREE.Quaternion();
 let cameraTarget = new THREE.Vector3()
 
 // @ts-ignore
-const directions = ({forward, backward, left, right}) => {
+const directions: React.FC = ({forward, backward, left, right}) => {
     var directions = 0;
 
     // diagonals
+// @ts-ignore
 
     if(forward) {
         if(left) {
