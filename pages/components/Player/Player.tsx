@@ -57,7 +57,7 @@ function getRandomArbitrary(low, high) {
 const GiftModel: React.FC = () => {
   
       const modelGift = useLoader(GLTFLoader, "/models/Gift.glb")
-      const [ref] = useBox(() => ({
+      const [refBox] = useBox(() => ({
           // @ts-ignore
         type: 'static',
         mass: 1,
@@ -67,7 +67,7 @@ const GiftModel: React.FC = () => {
   
       return(
           <>
-            <object3D ref={ref}>
+            <object3D ref={refBox}>
               <primitive object={modelGift.scene} scale={[0.04, 0.04, 0.04]} />
               </object3D>
           </>
@@ -119,6 +119,8 @@ export const PlayerModel: React.FC = () => {
 
     }, [forward, backward, left, right, jump])
     const [ref] = useBox(() => ({
+        mass: 5,
+        type: "Static"
     }))
 
     useFrame((state, delta) => {

@@ -9,7 +9,6 @@ import { useLoader } from "@react-three/fiber"
 
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
 import { Physics, useBox, usePlane } from '@react-three/cannon'
-// should work now
 import { NextPage } from 'next'
 import Ground from './components/Ground/Ground'
 import PlayerModel from './components/Player/Player';
@@ -35,7 +34,7 @@ const Home: NextPage = () => {
           <Ground />
           <PlayerModel />
           {/* <GiftModel /> */}
-          <Hurdle />
+          <Hurdle boundary={50} count={20} />
         </Physics>
       </Canvas>
     </div>
