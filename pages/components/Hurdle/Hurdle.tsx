@@ -48,7 +48,13 @@ const Hurdle: React.FC<props> = ({ boundary, count }) => {
     minBz: number,
     maxBx: number,
     maxBz: number
-  )
+  ) => {
+    let aLeftofB = maxAx < minBx
+    let aRightofB = minAx > maxBx
+    let aAboveB = minAz > maxBz
+    let aBelowB = maxAz < minBz
+    return !(aLeftofB || aRightofB || aAboveB || aBelowB);
+  }
 
     const isOverLapping = (
     index: number,
@@ -65,7 +71,7 @@ const Hurdle: React.FC<props> = ({ boundary, count }) => {
       let minChildZ = hurdless[i].position.x - hurdless[i].box / 2;
       let maxChildZ = hurdless[i].position.x + hurdless[i].box / 2;
       if (
-        hurdlesIntersect(
+        boxIntersect(
           minTargetX,
           maxTargetX,
           minTargetZ,
@@ -96,8 +102,10 @@ const Hurdle: React.FC<props> = ({ boundary, count }) => {
 
   const updatePos = (hurdleArray: HurdleType[], boundary: number) => {
     hurdleArray.forEach((hurdles, index) => {
-      hurdles.position.x = newPos(hurdles.box, boundary);
-      hurdles.position.z = newPos(hurdles.box, boundary);
+      do{
+        hurdles.position.x = newPos(hurdles.box, boundary);
+        hurdles.position.z = newPos(hurdles.box, boundary);
+      } while(isOverLapping(index, hurdles, hurdleArray))
     })
     setHurdles(hurdleArray);
   }

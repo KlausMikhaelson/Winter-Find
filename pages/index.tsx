@@ -5,8 +5,8 @@ import { useEffect, useRef } from "react";
 import { OrbitControls, Stats } from '@react-three/drei';
 import Lights from './components/Lightning/Lights';
 import { useLoader } from "@react-three/fiber"
+import { GiftModel } from './components/Player/Player';
 // @ts-ignore
-
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
 import { Physics, useBox, usePlane } from '@react-three/cannon'
 import { NextPage } from 'next'
@@ -32,9 +32,9 @@ const Home: NextPage = () => {
           <Lights />
           <gridHelper args={[1, 1]} />
           <Ground />
+          <GiftModel />
           <PlayerModel />
-          {/* <GiftModel /> */}
-          <Hurdle boundary={150} count={20} />
+          <Hurdle boundary={150} count={30} />
         </Physics>
       </Canvas>
     </div>

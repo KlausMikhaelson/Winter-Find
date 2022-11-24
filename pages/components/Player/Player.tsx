@@ -54,7 +54,7 @@ function getRandomArbitrary(low, high) {
   }
 
   var itemPos = [getRandomArbitrary(-75, 75), 1, getRandomArbitrary(-75, 75)];
-const GiftModel: React.FC = () => {
+export const GiftModel: React.FC = () => {
   
       const modelGift = useLoader(GLTFLoader, "/models/Gift.glb")
       const [refBox] = useBox(() => ({
