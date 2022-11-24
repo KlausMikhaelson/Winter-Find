@@ -37,10 +37,18 @@ const Hurdle: React.FC<props> = ({boundary, count}) => {
       
     }))
 
+    const newPos = (box: number, boundary: number) => {
+      return(
+        boundary / 2 -
+        box / 2 -
+        (boundary - box) * (Math.round(Math.random() * 100) / 100)
+      );
+    };
+
     const updatePos = (hurdleArray: HurdleType[], boundary: number) => {
       hurdleArray.forEach((hurdles, index) => {
-        hurdles.position.x = Math.random() * 100;
-        hurdles.position.z = Math.random() * 100;
+        hurdles.position.x = newPos(hurdles.box, boundary);
+        hurdles.position.z = newPos(hurdles.box, boundary);
       })
       setHurdles(hurdleArray);
     }

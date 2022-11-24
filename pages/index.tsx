@@ -34,7 +34,7 @@ const Home: NextPage = () => {
           <Ground />
           <PlayerModel />
           {/* <GiftModel /> */}
-          <Hurdle boundary={50} count={20} />
+          <Hurdle boundary={150} count={20} />
         </Physics>
       </Canvas>
     </div>
