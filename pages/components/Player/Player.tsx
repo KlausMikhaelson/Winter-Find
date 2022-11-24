@@ -76,6 +76,8 @@ export const GiftModel: React.FC = () => {
 
 
 export const PlayerModel: React.FC = () => {
+                // @ts-ignore
+
     const {forward, backward, left, right, jump}  = useInput()
     const modelPlayer = useLoader(GLTFLoader, "./models/playerss.glb")
     const {actions} = useAnimations(modelPlayer.animations, modelPlayer.scene)
@@ -134,6 +136,7 @@ export const PlayerModel: React.FC = () => {
 // rotating
             rotateQuarternion.setFromAxisAngle(
                 rotateAngle,
+                // @ts-ignore
                 angleYcameraDirection + newDirections
             );
             modelPlayer.scene.quaternion.rotateTowards(rotateQuarternion, 0.2)
