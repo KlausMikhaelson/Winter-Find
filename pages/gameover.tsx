@@ -8,7 +8,7 @@ const gameover = () => {
         <div className="row">
           <div className="col-md-12">
             <nav className="navbar navbar-md">
-              <div className="navbar-brand"> ./WinterFind</div>
+              <div className="navbar-brand">WinterFind</div>
               
             </nav>
           </div>
