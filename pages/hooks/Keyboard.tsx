@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 // @ts-ignore
-export const useInput: React.FC = () => {
+const useInput: React.FC = () => {
     const [input, setInput] = useState({
         forward: false,
         backward: false,
@@ -43,3 +43,5 @@ export const useInput: React.FC = () => {
     return input;
 
 }
+
+export default useInput;

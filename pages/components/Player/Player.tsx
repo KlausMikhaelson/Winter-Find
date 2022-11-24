@@ -5,7 +5,7 @@ import { Physics, useBox, usePlane } from '@react-three/cannon'
 import { useFrame, useLoader, useThree } from "@react-three/fiber"
 import { OrbitControls, useAnimations, useHelper } from "@react-three/drei";
 import React, { forwardRef, useEffect, useRef } from "react";
-import { useInput } from "../../hooks/Keyboard";
+import useInput from "../../hooks/Keyboard";
 // @ts-ignore
 import * as THREE from "three"
 
