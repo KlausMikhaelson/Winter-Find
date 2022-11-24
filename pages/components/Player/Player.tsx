@@ -16,7 +16,7 @@ let rotateQuarternion = new THREE.Quaternion();
 let cameraTarget = new THREE.Vector3()
 
 // @ts-ignore
-const directions: React.FC = ({forward, backward, left, right}) => {
+const directions = ({forward, backward, left, right}) => {
     var directions = 0;
 
     // diagonals
@@ -54,7 +54,7 @@ function getRandomArbitrary(low, high) {
   }
 
   var itemPos = [getRandomArbitrary(-75, 75), 1, getRandomArbitrary(-75, 75)];
-export const GiftModel: React.FC = () => {
+const GiftModel: React.FC = () => {
   
       const modelGift = useLoader(GLTFLoader, "/models/Gift.glb")
       const [ref] = useBox(() => ({
@@ -180,3 +180,4 @@ export const PlayerModel: React.FC = () => {
     )
   }
 
+export default PlayerModel;

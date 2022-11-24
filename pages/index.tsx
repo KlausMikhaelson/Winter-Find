@@ -12,7 +12,7 @@ import { Physics, useBox, usePlane } from '@react-three/cannon'
 
 import { NextPage } from 'next'
 import Ground from './components/Ground/Ground'
-import { PlayerModel, GiftModel } from './components/Player/Player';
+import PlayerModel from './components/Player/Player';
 import Hurdle from "./components/Hurdle/Hurdle"
 import { Sky, Cloud, Stars } from '@react-three/drei';
 // @ts-ignore
@@ -34,7 +34,7 @@ const Home: NextPage = () => {
           <gridHelper args={[1, 1]} />
           <Ground />
           <PlayerModel />
-          <GiftModel />
+          {/* <GiftModel /> */}
           <Hurdle />
         </Physics>
       </Canvas>
