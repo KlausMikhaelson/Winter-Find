@@ -12,7 +12,7 @@ const GameMap = () => {
     return (
         <>
             <mesh ref={ref} rotation-x={Math.PI * -0.5} receiveShadow>
-                <planeBufferGeometry args={[150, 150]} />
+                <planeBufferGeometry args={[250, 250]} />
                 <meshStandardMaterial color={"#ffffff"} />
             </mesh>
         </>

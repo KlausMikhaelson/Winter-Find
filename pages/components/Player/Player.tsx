@@ -4,7 +4,7 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
 import { Physics, useBox, usePlane } from '@react-three/cannon'
 import { useFrame, useLoader, useThree } from "@react-three/fiber"
 import { OrbitControls, useAnimations, useHelper } from "@react-three/drei";
-import React, { forwardRef, useEffect, useRef } from "react";
+import React, { forwardRef, useState, useEffect, useRef } from "react";
 import useInput from "../../hooks/Keyboard";
 // @ts-ignore
 import * as THREE from "three"
@@ -80,7 +80,7 @@ interface Props {
     time: number,
 }
 
-export const Timer: React.FC<Props> = ({time}) => {
+// export const Timer: React.FC<Props> = ({time}) => {
     // const [time, setTime] = React.useState<State>({
     //     time: 60,
     //     seconds: times - Math.floor((times - 1) / 60) * 60 - 1, 
@@ -91,38 +91,141 @@ export const Timer: React.FC<Props> = ({time}) => {
     //         if(time.times === 0)
     //     })
     // })
-    debugger;
-    const [state, setState] = React.useState<State>({
-        time,
-        seconds: time - Math.floor((time - 1) / 60),
-        minutes: time - Math.floor((time - 1) / 60) * 60 - 1,
-    });
+    // debugger;
+//     const [state, setState] = React.useState<State>({
+//         time,
+//         seconds: time - Math.floor((time - 1) / 60),
+//         minutes: time - Math.floor((time - 1) / 60) * 60 - 1,
+//     });
 
-    React.useEffect(() => {
-        setTimeout(() => {
-            if(state.time === 0) {
-                return;
-            }
+//     React.useEffect(() => {
+//         setTimeout(() => {
+//             if(state.time === 0) {
+//                 return;
+//             }
 
-            setState({
-                time: state.time - 1,
-                seconds: state.time - Math.floor((state.time - 1) / 60) * 60 - 1,
-                minutes: Math.floor((state.time - 1) / 60)
-            });
+//             setState({
+//                 time: state.time - 1,
+//                 seconds: state.time - Math.floor((state.time - 1) / 60) * 60 - 1,
+//                 minutes: Math.floor((state.time - 1) / 60)
+//             });
+//             const timing = state.time
+//     console.log(timing)
+//         }, 1000)
+//     }, [state.time]);
+
+//     return (
+//         <Html>
+//             <h1 className='timer'>
+//                 Time left:
+//             </h1>
+//             <h2>
+//                 {`${state.seconds}`}
+//             </h2>
+//         </Html>
+//     )
+// }
+
+
+
+// import React, { useState, useRef, useEffect } from 'react'
+  
+  
+const Timerrr = () => {
+  
+    // We need ref in this, because we are dealing
+    // with JS setInterval to keep track of it and
+    // stop it when needed
+    const Ref = useRef(null);
+  
+    // The state for our timer
+    const [timer, setTimer] = useState('00:00:00');
+  
+  
+    const getTimeRemaining = (e) => {
+        const total = Date.parse(e) - Date.parse(new Date());
+        const seconds = Math.floor((total / 1000) % 60);
+        const minutes = Math.floor((total / 1000 / 60) % 60);
+        const hours = Math.floor((total / 1000 / 60 / 60) % 24);
+        return {
+            total, hours, minutes, seconds
+        };
+    }
+  
+  
+    const startTimer = (e) => {
+        let { total, hours, minutes, seconds } 
+                    = getTimeRemaining(e);
+        if (total >= 0) {
+  
+            // update the timer
+            // check if less than 10 then we need to 
+            // add '0' at the beginning of the variable
+            setTimer(
+                (hours > 9 ? hours : '0' + hours) + ':' +
+                (minutes > 9 ? minutes : '0' + minutes) + ':'
+                + (seconds > 9 ? seconds : '0' + seconds)
+            )
+        }
+    }
+  
+  
+    const clearTimer = (e) => {
+  
+        // If you adjust it you should also need to
+        // adjust the Endtime formula we are about
+        // to code next    
+        setTimer('00:00:10');
+  
+        // If you try to remove this line the 
+        // updating of timer Variable will be
+        // after 1000ms or 1sec
+        if (Ref.current) clearInterval(Ref.current);
+        const id = setInterval(() => {
+            startTimer(e);
         }, 1000)
-    }, [state.time]);
+        Ref.current = id;
+    }
+  
+    const getDeadTime = () => {
+        let deadline = new Date();
+  
+        // This is where you need to adjust if 
+        // you entend to add more time
+        deadline.setSeconds(deadline.getSeconds() + 10);
+        return deadline;
+    }
+  
+    // We can use useEffect so that when the component
+    // mount the timer will start as soon as possible
+  
+    // We put empty array to act as componentDid
+    // mount only
+    useEffect(() => {
+        clearTimer(getDeadTime());
+    }, []);
+    const router = useRouter()
 
+
+  
+    // Another way to call the clearTimer() to start
+    // the countdown is via action event from the
+    // button first we create function to be called
+    // by the button
+    // const onClickReset = () => {
+    //     clearTimer(getDeadTime());
+    // }
+  
     return (
         <Html>
-            <h1 className='timer'>
-                Time left:
-            </h1>
-            <h2>
-                {`${state.seconds}`}
-            </h2>
+        <div className="App">
+            <h2>{timer}</h2>
+            {/* <button onClick={onClickReset}>Reset</button> */}
+        </div>
         </Html>
     )
 }
+
 
 
 export const PlayerModel: React.FC = () => {
@@ -221,9 +324,15 @@ export const PlayerModel: React.FC = () => {
         router.push('/gameover');
     }
 
+    // useEffect(() => {
+    //     const newTIming = Timer.toString(); 
+    //     console.log("newtiming", t)
+    // })
+
     return (
         <>
-            <Timer time={60}/>
+            {/* <Timer time={10}/> */}
+            {/* <Timerrr /> */}
             <object3D ref={ref} >
                 {/* @ts-ignore */}
                 <OrbitControls ref={controlsref} maxPolarAngle={Math.PI / 2.5} enableZoom={false} />

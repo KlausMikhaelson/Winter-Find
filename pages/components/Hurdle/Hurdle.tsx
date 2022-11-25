@@ -139,11 +139,15 @@ const Hurdle: React.FC<props> = ({ boundary, count }) => {
 
       {hurdles.map((hurdless, index) => {
         return (
+          <>
           <object3D key={index} position={[hurdless.position.x, 0, hurdless.position.z]}>
-            <primitive scale={[0.01, 0.01, 0.01]} object={hurdle01.scene.clone()} />
             <primitive scale={[0.01, 0.01, 0.01]} object={hurdle02.scene.clone()} />
             <primitive scale={[0.01, 0.01, 0.01]} object={hurdle03.scene.clone()} />
           </object3D>
+          <object3D key={index} ref={ref}>
+            <primitive object={hurdle01.scene.clone()} scale={[0.01, 0.01, 0.01]} position={[getRandomArbitrary(5, 60), 0, getRandomArbitrary(0, 100)]}/>
+            </object3D>
+          </>
         )
       })}
 
