@@ -5,7 +5,6 @@ import { useFrame, useLoader, useThree } from "@react-three/fiber"
 import React, { forwardRef, useEffect, useRef, useState } from "react";
 // @ts-ignore
 import * as THREE from "three"
-import { type } from "os";
 
 // @ts-ignore
 function getRandomArbitrary(low, high) {
@@ -121,22 +120,6 @@ const Hurdle: React.FC<props> = ({ boundary, count }) => {
 
   return (
     <>
-      {/* <object3D ref={ref}>
-            <primitive object={hurdle01.scene} scale={[0.01, 0.01, 0.01]} position={[getRandomArbitrary(-15, 0), 0, getRandomArbitrary(-15, 0)]}/>
-            </object3D>
-
-            <object3D ref={ref}>
-            <primitive object={hurdle01.scene} scale={[0.01, 0.01, 0.01]} position={[getRandomArbitrary(15, 60), 0, getRandomArbitrary(15, 60)]}/>
-            </object3D>
-
-            <object3D ref={ref}>
-            <primitive object={hurdle02.scene} scale={[0.01, 0.01, 0.01]} position={[getRandomArbitrary(-60, -15), 0, getRandomArbitrary(-60, -15)]} />
-            </object3D>
-            
-            <object3D ref={ref}>
-            <primitive object={hurdle03.scene} scale={[0.01, 0.01, 0.01]} position={[getRandomArbitrary(-75, -60), 0, getRandomArbitrary(-75, -60)]} />
-            </object3D> */}
-
       {hurdles.map((hurdless, index) => {
         return (
           <>

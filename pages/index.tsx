@@ -1,7 +1,6 @@
 import { Canvas } from '@react-three/fiber'
 import { useAnimations, useHelper } from "@react-three/drei";
 import { useEffect, useRef } from "react";
-// import { OrbitControls } from '@react-three/drei/core';
 import { OrbitControls, Stats } from '@react-three/drei';
 import Lights from './components/Lightning/Lights';
 import { useLoader } from "@react-three/fiber"
