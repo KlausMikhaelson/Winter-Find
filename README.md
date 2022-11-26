@@ -6,3 +6,9 @@
 - clone the repository
 - navigate to the root directory and enter `npm install`
 - after that just enter `npm run dev` and now play with it and propose changes that you like !
+
+
+##### Team 
+- Satyam Singh - @KlausMikhaelson
+- Kartik Patel - @kartikpatel0170
+- Happiness - @happiexplores
