@@ -14,6 +14,7 @@ import Ground from './components/Ground/Ground'
 import PlayerModel from './components/Player/Player';
 import Hurdle from "./components/Hurdle/Hurdle"
 import { Sky, Cloud, Stars } from '@react-three/drei';
+import Timerrr from './components/Player/Player';
 // @ts-ignore
 
 
@@ -33,7 +34,8 @@ const Home: NextPage = () => {
           <gridHelper args={[1, 1]} />
           <Ground />
           <GiftModel />
-          <PlayerModel />
+          {/* <PlayerModel /> */}
+          <Timerrr />
           <Hurdle boundary={150} count={30} />
         </Physics>
       </Canvas>

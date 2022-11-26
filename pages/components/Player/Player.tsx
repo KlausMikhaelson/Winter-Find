@@ -4,40 +4,42 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
 import { Physics, useBox, usePlane } from '@react-three/cannon'
 import { useFrame, useLoader, useThree } from "@react-three/fiber"
 import { OrbitControls, useAnimations, useHelper } from "@react-three/drei";
-import React, { forwardRef, useEffect, useRef } from "react";
+import React, { forwardRef, useState, useEffect, useRef } from "react";
 import useInput from "../../hooks/Keyboard";
 // @ts-ignore
 import * as THREE from "three"
+import styles from '../styles/globals.css'
+import { Html } from '@react-three/drei';
 
 
 const walkdirection = new THREE.Vector3()
-let rotateAngle = new THREE.Vector3(0,1,0);
+let rotateAngle = new THREE.Vector3(0, 1, 0);
 let rotateQuarternion = new THREE.Quaternion();
 let cameraTarget = new THREE.Vector3()
 
 // @ts-ignore
-const directions = ({forward, backward, left, right}) => {
+const directions = ({ forward, backward, left, right }) => {
     var directions = 0;
 
     // diagonals
-// @ts-ignore
+    // @ts-ignore
 
-    if(forward) {
-        if(left) {
+    if (forward) {
+        if (left) {
             directions = Math.PI / 4;
-        } else if(right) {
+        } else if (right) {
             directions = -Math.PI / 4;
         }
     } else if (backward) {
-        if(left) {
+        if (left) {
             directions = Math.PI / 4 + Math.PI / 2;
-        } else if(right) {
-            directions = -Math.PI / 4 - Math.PI / 2; 
+        } else if (right) {
+            directions = -Math.PI / 4 - Math.PI / 2;
         } else {
             directions = Math.PI;
         }
         // left
-    } else if(left) {
+    } else if (left) {
         directions = Math.PI / 2;
         // right
     } else if (right) {
@@ -51,36 +53,187 @@ const directions = ({forward, backward, left, right}) => {
 // @ts-ignore
 function getRandomArbitrary(low, high) {
     return Math.random() * (high - low) + low;
-  }
+}
 
-  var itemPos = [getRandomArbitrary(-75, 75), 1, getRandomArbitrary(-75, 75)];
+var itemPos = [getRandomArbitrary(-75, 75), 1, getRandomArbitrary(-75, 75)];
 export const GiftModel: React.FC = () => {
-  
-      const modelGift = useLoader(GLTFLoader, "/models/Gift.glb")
-      const [refBox] = useBox(() => ({
-          // @ts-ignore
+
+    const modelGift = useLoader(GLTFLoader, "/models/Gift.glb")
+    const [refBox] = useBox(() => ({
+        // @ts-ignore
         type: 'static',
         mass: 1,
         // @ts-ignore
         position: itemPos
-      }))
-  
-      return(
-          <>
+    }))
+
+    return (
+        <>
             <object3D ref={refBox}>
-              <primitive object={modelGift.scene} scale={[0.04, 0.04, 0.04]} />
-              </object3D>
-          </>
-      )
-  }
+                <primitive object={modelGift.scene} scale={[0.04, 0.04, 0.04]} />
+            </object3D>
+        </>
+    )
+}
+
+interface Props {
+    time: number,
+}
+
+// export const Timer: React.FC<Props> = ({time}) => {
+    // const [time, setTime] = React.useState<State>({
+    //     time: 60,
+    //     seconds: times - Math.floor((times - 1) / 60) * 60 - 1, 
+    // });
+
+    // React.useEffect(() => {
+    //     setTimeout(() => {
+    //         if(time.times === 0)
+    //     })
+    // })
+    // debugger;
+//     const [state, setState] = React.useState<State>({
+//         time,
+//         seconds: time - Math.floor((time - 1) / 60),
+//         minutes: time - Math.floor((time - 1) / 60) * 60 - 1,
+//     });
+
+//     React.useEffect(() => {
+//         setTimeout(() => {
+//             if(state.time === 0) {
+//                 return;
+//             }
+
+//             setState({
+//                 time: state.time - 1,
+//                 seconds: state.time - Math.floor((state.time - 1) / 60) * 60 - 1,
+//                 minutes: Math.floor((state.time - 1) / 60)
+//             });
+//             const timing = state.time
+//     console.log(timing)
+//         }, 1000)
+//     }, [state.time]);
+
+//     return (
+//         <Html>
+//             <h1 className='timer'>
+//                 Time left:
+//             </h1>
+//             <h2>
+//                 {`${state.seconds}`}
+//             </h2>
+//         </Html>
+//     )
+// }
+
+
+
+// import React, { useState, useRef, useEffect } from 'react'
+  
+  
+const Timerrr = () => {
+  
+    // We need ref in this, because we are dealing
+    // with JS setInterval to keep track of it and
+    // stop it when needed
+    const Ref = useRef(null);
+  
+    // The state for our timer
+    const [timer, setTimer] = useState('00:00:00');
+  
+  
+    const getTimeRemaining = (e) => {
+        const total = Date.parse(e) - Date.parse(new Date());
+        const seconds = Math.floor((total / 1000) % 60);
+        const minutes = Math.floor((total / 1000 / 60) % 60);
+        const hours = Math.floor((total / 1000 / 60 / 60) % 24);
+        return {
+            total, hours, minutes, seconds
+        };
+    }
+  
+  
+    const startTimer = (e) => {
+        let { total, hours, minutes, seconds } 
+                    = getTimeRemaining(e);
+        if (total >= 0) {
+  
+            // update the timer
+            // check if less than 10 then we need to 
+            // add '0' at the beginning of the variable
+            setTimer(
+                (hours > 9 ? hours : '0' + hours) + ':' +
+                (minutes > 9 ? minutes : '0' + minutes) + ':'
+                + (seconds > 9 ? seconds : '0' + seconds)
+            )
+        }
+    }
+  
+  
+    const clearTimer = (e) => {
+  
+        // If you adjust it you should also need to
+        // adjust the Endtime formula we are about
+        // to code next    
+        setTimer('00:00:10');
+  
+        // If you try to remove this line the 
+        // updating of timer Variable will be
+        // after 1000ms or 1sec
+        if (Ref.current) clearInterval(Ref.current);
+        const id = setInterval(() => {
+            startTimer(e);
+        }, 1000)
+        Ref.current = id;
+    }
+  
+    const getDeadTime = () => {
+        let deadline = new Date();
+  
+        // This is where you need to adjust if 
+        // you entend to add more time
+        deadline.setSeconds(deadline.getSeconds() + 10);
+        return deadline;
+    }
+  
+    // We can use useEffect so that when the component
+    // mount the timer will start as soon as possible
+  
+    // We put empty array to act as componentDid
+    // mount only
+    useEffect(() => {
+        clearTimer(getDeadTime());
+    }, []);
+    const router = useRouter()
+
+
+  
+    // Another way to call the clearTimer() to start
+    // the countdown is via action event from the
+    // button first we create function to be called
+    // by the button
+    // const onClickReset = () => {
+    //     clearTimer(getDeadTime());
+    // }
+  
+    return (
+        <Html>
+        <div className="App">
+            <h2>{timer}</h2>
+            {/* <button onClick={onClickReset}>Reset</button> */}
+        </div>
+        </Html>
+    )
+}
+
 
 
 export const PlayerModel: React.FC = () => {
-                // @ts-ignore
+    // @ts-ignore
 
-    const {forward, backward, left, right, jump}  = useInput()
+    const { forward, backward, left, right, jump } = useInput()
     const modelPlayer = useLoader(GLTFLoader, "./models/playerss.glb")
-    const {actions} = useAnimations(modelPlayer.animations, modelPlayer.scene)
+    const { actions } = useAnimations(modelPlayer.animations, modelPlayer.scene)
 
     const currentAction = useRef("")
     const controlsref = useRef<typeof OrbitControls>();
@@ -95,21 +248,21 @@ export const PlayerModel: React.FC = () => {
         cameraTarget.y = modelPlayer.scene.position.y + 2;
         cameraTarget.z = modelPlayer.scene.position.z;
         // @ts-ignore
-        if(controlsref.current) controlsref.current.target = cameraTarget;
+        if (controlsref.current) controlsref.current.target = cameraTarget;
     }
-  
+
     useEffect(() => {
         let action = ""
 
-        if(forward || backward || left || right) {
+        if (forward || backward || left || right) {
             action = "walkingmodel"
-        } else if(jump) {
-            action="Jumpingmodels"
+        } else if (jump) {
+            action = "Jumpingmodels"
         } else {
-            action="idlestatess"
+            action = "idlestatess"
         }
 
-        if(currentAction.current != action) {
+        if (currentAction.current != action) {
             const nextAction = actions[action];
             const current = actions[currentAction.current]
             current?.fadeOut(0.2);
@@ -124,7 +277,7 @@ export const PlayerModel: React.FC = () => {
     }))
 
     useFrame((state, delta) => {
-        if(currentAction.current == "walkingmodel") {
+        if (currentAction.current == "walkingmodel") {
             let angleYcameraDirection = Math.atan2(
                 camera.position.x - modelPlayer.scene.position.x,
                 camera.position.z - modelPlayer.scene.position.z
@@ -135,7 +288,7 @@ export const PlayerModel: React.FC = () => {
                 left,
                 right
             });
-// rotating
+            // rotating
             rotateQuarternion.setFromAxisAngle(
                 rotateAngle,
                 // @ts-ignore
@@ -162,24 +315,31 @@ export const PlayerModel: React.FC = () => {
     var playerPos = [Math.round(modelPlayer.scene.position.x), Math.round(modelPlayer.scene.position.y), Math.round(modelPlayer.scene.position.z)];
     var avItemPos = [Math.round(itemPos[0]), Math.round(itemPos[1]), Math.round(itemPos[2])]
 
-    console.log(playerPos);
-    console.log(avItemPos);
-    if((playerPos[0] == avItemPos[0] && playerPos[1] == avItemPos[1]) || 
-        (playerPos[1] == avItemPos[1] && playerPos[2] == avItemPos[2]) || 
-        (playerPos[0] == avItemPos[0] && playerPos[2] == avItemPos[2]) ){
-        
-            router.push('/gameover');
+    // console.log(playerPos);
+    // console.log(avItemPos);
+    if ((playerPos[0] == avItemPos[0] && playerPos[1] == avItemPos[1]) ||
+        (playerPos[1] == avItemPos[1] && playerPos[2] == avItemPos[2]) ||
+        (playerPos[0] == avItemPos[0] && playerPos[2] == avItemPos[2])) {
+
+        router.push('/gameover');
     }
 
-    return(
-      <>
-      <object3D ref={ref} >
-      {/* @ts-ignore */}
-        <OrbitControls ref={controlsref} maxPolarAngle={Math.PI/2.5} enableZoom={false}/>
-        <primitive object={modelPlayer.scene} />
-      </object3D>
-      </>
+    // useEffect(() => {
+    //     const newTIming = Timer.toString(); 
+    //     console.log("newtiming", t)
+    // })
+
+    return (
+        <>
+            {/* <Timer time={10}/> */}
+            {/* <Timerrr /> */}
+            <object3D ref={ref} >
+                {/* @ts-ignore */}
+                <OrbitControls ref={controlsref} maxPolarAngle={Math.PI / 2.5} enableZoom={false} />
+                <primitive object={modelPlayer.scene} />
+            </object3D>
+        </>
     )
-  }
+}
 
 export default PlayerModel;

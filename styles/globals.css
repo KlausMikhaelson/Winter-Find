@@ -8,6 +8,11 @@ body {
   width: 100%;
 }
 
+.timer {
+	display: flex;
+	justify-content: end;
+}
+
 /* {
 	margin:0;
 	padding:0;
