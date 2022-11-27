@@ -1,0 +1,438 @@
+.aboutContainer {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: space-between;
+  }
+  
+  .aboutMobileContainer{
+    display: none;
+  }
+  
+  .about-left {
+    width: 50%;
+    color: #001837;
+    margin-top: 4rem;
+  }
+  
+  .about-mainHead {
+    font-size: 4rem;
+    margin: 0;
+    /* width: 80%; */
+  }
+  .about-subHead {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  
+  .about-Content {
+    font-size: 25px;
+    color: #707070;
+    width: 80%;
+    /* line-height: 2rem; */
+  }
+  
+  .about-right {
+    width: 50%;
+    /* border: 1px solid red; */
+    position: relative;
+  }
+  
+  .detail-container {
+    border-radius: 5px;
+    position: absolute;
+    bottom: -20%;
+    /* bottom: 0%; */
+    width: 80%;
+    left: 10%;
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    /* display: flex; */
+    /* flex-direction: column; */
+  }
+  
+  .detail-container div {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+  }
+  
+  .detail-info {
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 0.5rem;
+  }
+  
+  .input {
+    padding: 20px 30px;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    border: 1px solid rgb(235, 235, 235);
+    outline: none;
+    font-size: 18px;
+  }
+  
+  .detailHeading {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  
+  .detailBtn button {
+    background-color: #738ff8;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 2rem 0;
+    cursor: pointer;
+  }
+  
+  /* 
+  @media screen and (max-width: 1920px) {
+  
+      
+    .about-left {
+        margin-top: 4rem;
+      }
+    
+      .about-mainHead {
+        font-size: 3.2rem;
+      }
+      .about-subHead {
+        font-size: 12px;
+      }
+      
+      .about-Content {
+        font-size: 1.2rem;
+      }
+    
+      .detail-container {
+        top: -100%;
+        width: 90%;
+        left: 10%;
+      }
+      
+      .detail-container div {
+        margin: 0.6rem 0.5rem;
+      }
+      
+      .detail-info {
+        font-size: 16px;
+        font-weight: 600;
+        padding: 0.4rem;
+      }
+      
+      .input {
+        padding: 10px 25px;
+        font-size: 14px;
+        padding-left: 0.5rem;
+      }
+      
+      .detailHeading {
+        text-align: center;
+        font-size: 1rem;
+      }
+    
+      .detailBtn button {
+        padding:10px 25px;
+        font-size: 14px;
+    
+      }
+  } */
+  
+  
+  
+  @media screen and (max-width: 1470px) {
+  
+      
+    .about-left {
+        margin-top: 4rem;
+      }
+    
+      .about-mainHead {
+        font-size: 2.2rem;
+      }
+      .about-subHead {
+        font-size: 12px;
+      }
+      
+      .about-Content {
+        font-size: 1.2rem;
+      }
+    
+      /* .detail-container {
+        top: -80%;
+        width: 90%;
+        left: 10%;
+      }
+      
+      .detail-container div {
+        margin: 0.3rem 0.5rem;
+      }
+      
+      .detail-info {
+        font-size: 16px;
+        font-weight: 600;
+        padding: 0.4rem;
+      }
+      
+      .input {
+        padding: 10px 25px;
+        font-size: 14px;
+        padding-left: 0.5rem;
+      }
+      
+      .detailHeading {
+        text-align: center;
+        font-size: 1rem;
+      } */
+    
+  
+  }
+  
+  
+  
+  
+  
+  @media screen and (max-width: 1370px) {
+  
+      
+      .about-left {
+          margin-top: 4rem;
+        }
+      
+        .about-mainHead {
+          font-size: 2.2rem;
+        }
+        .about-subHead {
+          font-size: 12px;
+        }
+        
+        .about-Content {
+          font-size: 1.2rem;
+        }
+      
+        .detail-container {
+          top: -80%;
+          width: 90%;
+          left: 10%;
+        }
+        
+        .detail-container div {
+          margin: 0.4rem 0.5rem;
+        }
+        
+        .detail-info {
+          font-size: 16px;
+          font-weight: 600;
+          padding: 0.4rem;
+        }
+        
+        .input {
+          padding: 10px 25px;
+          font-size: 14px;
+          padding-left: 0.5rem;
+        }
+        
+        .detailHeading {
+          text-align: center;
+          font-size: 1rem;
+        }
+      
+        .detailBtn button {
+          padding:10px 25px;
+          font-size: 14px;
+      
+        }
+  }
+  
+  @media screen and (max-width: 1024px) {
+    .about-left {
+      margin-top: 2rem;
+    }
+  
+    .about-mainHead {
+      font-size: 2.2rem;
+    }
+    .about-subHead {
+      font-size: 12px;
+    }
+  
+    .about-Content {
+      font-size: 1.2rem;
+    }
+  
+    .detail-container {
+      top: -80%;
+      width: 90%;
+      left: 10%;
+    }
+  
+    .detail-container div {
+      margin: 0.4rem 0.5rem;
+    }
+  
+    .detail-info {
+      font-size: 16px;
+      font-weight: 600;
+      padding: 0.4rem;
+    }
+  
+    .input {
+      padding: 10px 25px;
+      font-size: 14px;
+      padding-left: 0.5rem;
+    }
+  
+    .detailHeading {
+      text-align: center;
+      font-size: 1rem;
+    }
+  
+    .detailBtn button {
+      padding: 10px 25px;
+      font-size: 14px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .about-left {
+      margin-top: 2rem;
+    }
+  
+    .about-mainHead {
+      font-size: 2rem;
+    }
+    .about-subHead {
+      font-size: 10px;
+    }
+  
+    .about-Content {
+      font-size: 1rem;
+    }
+  
+    .detail-container {
+      top: -80%;
+      width: 90%;
+      left: 10%;
+    }
+  
+    .detail-container div {
+      margin: 0.4rem 0.5rem;
+    }
+  
+    .detail-info {
+      font-size: 14px;
+      font-weight: 600;
+      padding: 0.4rem;
+    }
+  
+    .input {
+      padding: 10px 25px;
+      font-size: 14px;
+      padding-left: 0.5rem;
+    }
+  
+    .detailHeading {
+      text-align: center;
+      font-size: 1rem;
+    }
+  
+    .detailBtn button {
+      padding: 10px 25px;
+      font-size: 14px;
+    }
+  }
+  
+  
+  
+  @media screen and (max-width: 425px) {
+    .aboutContainer{
+      display: none;
+    }
+    .aboutMobileContainer{
+      display: block;
+      width: 90%;
+      margin: auto;
+      margin-top: 4rem;
+    }
+  
+    
+  .about-Top {
+    color: #001837;
+    margin-top: 2rem;
+  }
+  
+  .aboutTop-mainHead {
+    font-size: 2.3rem;
+    margin: 0;
+    /* width: 80%; */
+  }
+  .aboutTop-subHead {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  
+  .aboutTop-Content {
+    font-size: 1.2rem;
+    color: #707070;
+    width: 100%;
+    /* line-height: 2rem; */
+  }
+  .about-bottom{
+    /* border: 1px solid red; */
+  }
+  
+  .aboutDetail-container{
+    width: 90%;
+    margin: auto;
+  }
+  
+  .aboutDetail-container div {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+  }
+  
+  
+  .aboutDetail-info {
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 0.5rem;
+  }
+  
+  .aboutDetail-input {
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    border: 1px solid rgb(235, 235, 235);
+    outline: none;
+    font-size: 18px;
+  }
+  
+  .aboutDetailHeading {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  
+  .aboutDetail-detailBtn button {
+    background-color: #738ff8;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 2rem 0;
+    cursor: pointer;
+  }
+  
+  
+  }

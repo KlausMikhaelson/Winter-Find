@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "bootstrap-icons": "^1.10.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "css-loader": "^6.7.2",
+    "mini-css-extract-plugin": "^2.7.0",
+    "postcss-loader": "^7.0.1",
+    "sass": "^1.56.1",
+    "sass-loader": "^13.2.0"
+  }
+}

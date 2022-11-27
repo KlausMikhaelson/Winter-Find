@@ -1,0 +1,39 @@
+.header {
+  text-align: center;
+  margin: 10px;
+  font-size: 2rem;
+}
+
+
+.container {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  max-width: 60%;
+}
+
+.description {
+  text-align: center;
+  font-size: 1rem;
+  margin: 10px;
+}
+
+.container-2 {
+  margin: 50px;
+}
+
+.btn {
+  background-color: rgb(236, 151, 255);
+}
+
+.Login-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  color: white;
+  padding: 20px;
+
+}
