@@ -5,7 +5,6 @@ import { useFrame, useLoader, useThree } from "@react-three/fiber"
 import React, { forwardRef, useEffect, useRef, useState } from "react";
 // @ts-ignore
 import * as THREE from "three"
-import { type } from "os";
 
 // @ts-ignore
 function getRandomArbitrary(low, high) {
@@ -121,29 +120,17 @@ const Hurdle: React.FC<props> = ({ boundary, count }) => {
 
   return (
     <>
-      {/* <object3D ref={ref}>
-            <primitive object={hurdle01.scene} scale={[0.01, 0.01, 0.01]} position={[getRandomArbitrary(-15, 0), 0, getRandomArbitrary(-15, 0)]}/>
-            </object3D>
-
-            <object3D ref={ref}>
-            <primitive object={hurdle01.scene} scale={[0.01, 0.01, 0.01]} position={[getRandomArbitrary(15, 60), 0, getRandomArbitrary(15, 60)]}/>
-            </object3D>
-
-            <object3D ref={ref}>
-            <primitive object={hurdle02.scene} scale={[0.01, 0.01, 0.01]} position={[getRandomArbitrary(-60, -15), 0, getRandomArbitrary(-60, -15)]} />
-            </object3D>
-            
-            <object3D ref={ref}>
-            <primitive object={hurdle03.scene} scale={[0.01, 0.01, 0.01]} position={[getRandomArbitrary(-75, -60), 0, getRandomArbitrary(-75, -60)]} />
-            </object3D> */}
-
       {hurdles.map((hurdless, index) => {
         return (
+          <>
           <object3D key={index} position={[hurdless.position.x, 0, hurdless.position.z]}>
-            <primitive scale={[0.01, 0.01, 0.01]} object={hurdle01.scene.clone()} />
             <primitive scale={[0.01, 0.01, 0.01]} object={hurdle02.scene.clone()} />
             <primitive scale={[0.01, 0.01, 0.01]} object={hurdle03.scene.clone()} />
           </object3D>
+          <object3D key={index} ref={ref}>
+            <primitive object={hurdle01.scene.clone()} scale={[0.01, 0.01, 0.01]} position={[getRandomArbitrary(5, 60), 0, getRandomArbitrary(0, 100)]}/>
+            </object3D>
+          </>
         )
       })}
 
