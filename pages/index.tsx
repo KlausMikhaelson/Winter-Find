@@ -1,6 +1,6 @@
 import { Canvas } from '@react-three/fiber'
 import { useAnimations, useHelper } from "@react-three/drei";
-import { useEffect, useRef } from "react";
+import { Suspense,useEffect, useRef } from "react";
 // import { OrbitControls } from '@react-three/drei/core';
 import { OrbitControls, Stats } from '@react-three/drei';
 import Lights from '../components/Lightning/Lights';
@@ -25,6 +25,8 @@ const Home: NextPage = () => {
     <div className='container'>
       {/* camera={{position:[0,2,0]}} */}
       <Canvas>
+        <Suspense fallback={null}>
+
         <Sky sunPosition={[0, -1, 0]} inclination={0} azimuth={0.5} />
         <fog attach="fog" color="#f2f2f" near={7} far={10} />
         <Stars radius={1} depth={500} count={5000} factor={40} saturation={0} fade speed={1} />
@@ -38,6 +40,7 @@ const Home: NextPage = () => {
           <Timerrr />
           <Hurdle boundary={150} count={30} />
         </Physics>
+        </Suspense>
       </Canvas>
     </div>
   )
