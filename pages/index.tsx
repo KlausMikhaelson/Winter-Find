@@ -3,18 +3,18 @@ import { useAnimations, useHelper } from "@react-three/drei";
 import { useEffect, useRef } from "react";
 // import { OrbitControls } from '@react-three/drei/core';
 import { OrbitControls, Stats } from '@react-three/drei';
-import Lights from './components/Lightning/Lights';
+import Lights from '../components/Lightning/Lights';
 import { useLoader } from "@react-three/fiber"
-import { GiftModel } from './components/Player/Player';
+import { GiftModel } from '../components/Player/Player';
 // @ts-ignore
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
 import { Physics, useBox, usePlane } from '@react-three/cannon'
 import { NextPage } from 'next'
-import Ground from './components/Ground/Ground'
-import PlayerModel from './components/Player/Player';
-import Hurdle from "./components/Hurdle/Hurdle"
+import Ground from '../components/Ground/Ground'
+import PlayerModel from '../components/Player/Player';
+import Hurdle from "../components/Hurdle/Hurdle"
 import { Sky, Cloud, Stars } from '@react-three/drei';
-import Timerrr from './components/Player/Player';
+import Timerrr from '../components/Player/Player';
 // @ts-ignore
 
 

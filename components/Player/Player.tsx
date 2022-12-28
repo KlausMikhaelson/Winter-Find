@@ -5,10 +5,9 @@ import { Physics, useBox, usePlane } from '@react-three/cannon'
 import { useFrame, useLoader, useThree } from "@react-three/fiber"
 import { OrbitControls, useAnimations, useHelper } from "@react-three/drei";
 import React, { forwardRef, useState, useEffect, useRef } from "react";
-import useInput from "../../hooks/Keyboard";
+import useInput from '../../hooks/Keyboard';
 // @ts-ignore
 import * as THREE from "three"
-import styles from '../styles/globals.css'
 import { Html } from '@react-three/drei';
 
 
@@ -141,8 +140,9 @@ const Timerrr = () => {
     // The state for our timer
     const [timer, setTimer] = useState('00:00:00');
   
-  
+        // @ts-ignore
     const getTimeRemaining = (e) => {
+        // @ts-ignore
         const total = Date.parse(e) - Date.parse(new Date());
         const seconds = Math.floor((total / 1000) % 60);
         const minutes = Math.floor((total / 1000 / 60) % 60);
@@ -152,7 +152,7 @@ const Timerrr = () => {
         };
     }
   
-  
+        // @ts-ignore
     const startTimer = (e) => {
         let { total, hours, minutes, seconds } 
                     = getTimeRemaining(e);
@@ -170,6 +170,7 @@ const Timerrr = () => {
     }
   
   
+    // @ts-ignore
     const clearTimer = (e) => {
   
         // If you adjust it you should also need to
@@ -184,6 +185,7 @@ const Timerrr = () => {
         const id = setInterval(() => {
             startTimer(e);
         }, 1000)
+        // @ts-ignore
         Ref.current = id;
     }
   
