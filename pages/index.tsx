@@ -1,7 +1,7 @@
 
 import { Canvas } from '@react-three/fiber'
 // @ts-ignore
-import { useAnimations, useHelper } from "@react-three/drei";
+import { Environment, useAnimations, useHelper } from "@react-three/drei";
 import { Suspense, useEffect, useRef } from "react";
 // @ts-ignore
 import { OrbitControls, Stats } from '@react-three/drei';
@@ -19,13 +19,15 @@ import styles from '../styles/Home.module.css'
 import PlayerModel from '../components/Player';
 import Hurdle from "../components/Hurdle"
 // @ts-ignore
-import { Sky, Cloud, Stars } from '@react-three/drei';
+import { Sky, Cloud, Stars, useEnvironment } from '@react-three/drei';
 import Timerrr from '../components/Player';
 // @ts-ignore
 
 
 
 const Home: NextPage = () => {
+
+  const envMap =  useEnvironment({path: "/envi"})
 
   return (
     <>
@@ -49,6 +51,7 @@ const Home: NextPage = () => {
               {/* <Timerrr /> */}
               <Hurdle boundary={150} count={30} />
             </Physics>
+            <Environment map={envMap} background />
           </Suspense>
         </Canvas>
       </div>
