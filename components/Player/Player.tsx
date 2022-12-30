@@ -79,56 +79,7 @@ interface Props {
     time: number,
 }
 
-// export const Timer: React.FC<Props> = ({time}) => {
-    // const [time, setTime] = React.useState<State>({
-    //     time: 60,
-    //     seconds: times - Math.floor((times - 1) / 60) * 60 - 1, 
-    // });
 
-    // React.useEffect(() => {
-    //     setTimeout(() => {
-    //         if(time.times === 0)
-    //     })
-    // })
-    // debugger;
-//     const [state, setState] = React.useState<State>({
-//         time,
-//         seconds: time - Math.floor((time - 1) / 60),
-//         minutes: time - Math.floor((time - 1) / 60) * 60 - 1,
-//     });
-
-//     React.useEffect(() => {
-//         setTimeout(() => {
-//             if(state.time === 0) {
-//                 return;
-//             }
-
-//             setState({
-//                 time: state.time - 1,
-//                 seconds: state.time - Math.floor((state.time - 1) / 60) * 60 - 1,
-//                 minutes: Math.floor((state.time - 1) / 60)
-//             });
-//             const timing = state.time
-//     console.log(timing)
-//         }, 1000)
-//     }, [state.time]);
-
-//     return (
-//         <Html>
-//             <h1 className='timer'>
-//                 Time left:
-//             </h1>
-//             <h2>
-//                 {`${state.seconds}`}
-//             </h2>
-//         </Html>
-//     )
-// }
-
-
-
-// import React, { useState, useRef, useEffect } from 'react'
-  
   
 const Timerrr = () => {
   
@@ -209,20 +160,10 @@ const Timerrr = () => {
     const router = useRouter()
 
 
-  
-    // Another way to call the clearTimer() to start
-    // the countdown is via action event from the
-    // button first we create function to be called
-    // by the button
-    // const onClickReset = () => {
-    //     clearTimer(getDeadTime());
-    // }
-  
     return (
         <Html>
         <div className="App">
             <h2>{timer}</h2>
-            {/* <button onClick={onClickReset}>Reset</button> */}
         </div>
         </Html>
     )

@@ -1,7 +1,6 @@
 import { Canvas } from '@react-three/fiber'
 import { Html, useAnimations, useHelper } from "@react-three/drei";
 import { Suspense,useEffect, useRef } from "react";
-// import { OrbitControls } from '@react-three/drei/core';
 import { OrbitControls, Stats } from '@react-three/drei';
 import Lights from '../components/Lightning/Lights';
 import { useLoader } from "@react-three/fiber"
@@ -36,7 +35,6 @@ const Home: NextPage = () => {
           <gridHelper args={[1, 1]} />
           <Ground />
           <GiftModel />
-          {/* <PlayerModel /> */}
           <Timerrr />
           <Hurdle boundary={150} count={30} />
         </Physics>
