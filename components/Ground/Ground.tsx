@@ -3,7 +3,6 @@ import { useLoader } from "@react-three/fiber"
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
 import { Physics, useBox, usePlane } from '@react-three/cannon'
 const GameMap = () => {
-    // const model = useLoader(GLTFLoader, "./models/map.glb")
     const [ref] = useBox(() => ({
         rotation: [Math.PI * -0.5, 0, 0],
         mass: 10,
