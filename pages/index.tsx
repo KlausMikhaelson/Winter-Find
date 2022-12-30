@@ -1,5 +1,5 @@
 import { Canvas } from '@react-three/fiber'
-import { useAnimations, useHelper } from "@react-three/drei";
+import { Html, useAnimations, useHelper } from "@react-three/drei";
 import { Suspense,useEffect, useRef } from "react";
 // import { OrbitControls } from '@react-three/drei/core';
 import { OrbitControls, Stats } from '@react-three/drei';
@@ -25,7 +25,7 @@ const Home: NextPage = () => {
     <div className='container'>
       {/* camera={{position:[0,2,0]}} */}
       <Canvas>
-        <Suspense fallback={null}>
+        <Suspense fallback={<Html><h1>Loading...</h1></Html>}>
 
         <Sky sunPosition={[0, -1, 0]} inclination={0} azimuth={0.5} />
         <fog attach="fog" color="#f2f2f" near={7} far={10} />
