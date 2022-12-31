@@ -6,3 +6,7 @@
 - clone the repository
 - navigate to the root directory and enter `npm install`
 - after that just enter `npm run dev` and now play with it and propose changes that you like !
+
+## Story ?
+- Since christmas is coming soon so this game is on winter/christmas theme where the players have to find a gift hidden in the map !
+<img width="960" alt="image" src="https://user-images.githubusercontent.com/100528412/204080773-79a68c82-e837-4d52-a00e-54a7426e1d0b.png">

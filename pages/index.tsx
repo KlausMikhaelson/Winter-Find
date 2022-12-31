@@ -1,3 +1,4 @@
+
 import { Canvas } from '@react-three/fiber'
 import { Html, useAnimations, useHelper } from "@react-three/drei";
 import { Suspense,useEffect, useRef } from "react";
@@ -7,6 +8,7 @@ import { useLoader } from "@react-three/fiber"
 import { GiftModel } from '../components/Player/Player';
 // @ts-ignore
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
+// @ts-ignore
 import { Physics, useBox, usePlane } from '@react-three/cannon'
 import { NextPage } from 'next'
 import Ground from '../components/Ground/Ground'
@@ -19,6 +21,8 @@ import Timerrr from '../components/Player/Player';
 
 
 const Home: NextPage = () => {
+
+  const envMap =  useEnvironment({path: "/envi"})
 
   return (
     <div className='container'>
