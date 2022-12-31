@@ -6,6 +6,11 @@ body {
 
 
 
+.timer {
+	display: flex;
+	justify-content: end;
+}
+
 /* {
 	margin:0;
 	padding:0;
