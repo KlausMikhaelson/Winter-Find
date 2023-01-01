@@ -11,8 +11,7 @@ Winter find is a 3D interactive web-based game where the user have to search for
 2. **Fog**- we managed to reduce the intensity of the objects after certain distance to increase the complexity.
 
 ## Technology Used
-- Front-end: HTML, CSS, Bootstrap, Blender, TypeScript
-- Backend: NextJs, ThreeJs, React Fiber
+- Bootstrap, Blender, TypeScript, NextJs, ThreeJs, React Fiber
 
 ## Instructions for Setup (Windows User)
 1. Install Node on your system from here https://nodejs.org/en/download/
